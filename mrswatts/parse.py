@@ -6,13 +6,20 @@ except:
 import sys
 
 
-def messages(tag):
+def messages(tag, contacts):
+
+    dict_contact = {}
+    for contact in contacts.splitlines():
+        id = contact.split('|')[0]
+        name = contact.split('|')[1]
+        dict_contact[id] = name
+
     summary = []
     lines = tag.splitlines()
     for line in lines:
         person = line.split('|')[1]
         data = line.split('|')[6].replace('@cabin', '').strip()
-        summary.append(person + ': ' + data)
+        summary.append(dict_contact[person] + ': ' + data)
     return "\n".join(summary)
 
 if __name__ == "__main__":

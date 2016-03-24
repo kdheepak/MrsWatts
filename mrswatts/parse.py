@@ -27,12 +27,12 @@ if __name__ == "__main__":
         sys.exit(1)
 
     try:
-        line_number = droid.getIntent().result[u'extras'][u'%line_number']
+        line_number = int(droid.getIntent().result[u'extras'][u'%line_number'])
     except:
         line_number = 0
 
     try:
-        position = droid.getIntent().result[u'extras'][u'%position']
+        position = int(droid.getIntent().result[u'extras'][u'%position'])
     except:
         position = 0
 

@@ -17,8 +17,8 @@ def messages(tag, contacts):
     summary = []
     lines = tag.splitlines()
     for line in lines:
-        person = line.split('|')[1]
-        data = line.split('|')[6].replace('@cabin', '').strip()
+        person = line.split('|')[0]
+        data = line.split('|')[1].replace('@cabin', '').strip()
         summary.append(dict_contact[person] + ': ' + data)
     return "\n".join(summary)
 

@@ -8,3 +8,5 @@ if __name__ == '__main__':
     except:
         droid.makeToast('data missing')
         sys.exit(1)
+
+    droid.makeToast(tag)

@@ -12,3 +12,4 @@ if __name__ == '__main__':
         sys.exit(1)
 
     droid.makeToast(parse.messages(tag))
+    sys.exit(1)

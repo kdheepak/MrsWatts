@@ -1,7 +1,10 @@
 import sys
+import android
 
 if __name__ == '__main__':
-    print(sys.argv)
-    import android
     droid = android.Android()
-    droid.makeToast(str(sys.argv))
+    try:
+        tag = droid.getIntent().result[u'extras'][u'%tag']
+    except:
+        droid.makeToast('data missing')
+        sys.exit(1)

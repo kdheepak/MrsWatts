@@ -1,6 +1,8 @@
 import sys
 import android
 
+import parse
+
 if __name__ == '__main__':
     droid = android.Android()
     try:
@@ -9,4 +11,4 @@ if __name__ == '__main__':
         droid.makeToast('data missing')
         sys.exit(1)
 
-    droid.makeToast(tag)
+    droid.makeToast(parse.messages(tag))

@@ -36,4 +36,4 @@ if __name__ == "__main__":
     except:
         position = 0
 
-    droid.makeToast(lines.splitlines()[line_number].split('|')[position].strip())
+    droid.setClipboard(lines.splitlines()[line_number].split('|')[position].strip())

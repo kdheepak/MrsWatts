@@ -12,5 +12,6 @@ if __name__ == '__main__':
         droid.makeToast('data missing')
         sys.exit(1)
 
-    droid.makeToast(parse.messages(tag, contacts))
+    droid.setClipboard(parse.messages(tag, contacts))
+
     sys.exit(1)
